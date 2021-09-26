@@ -14,8 +14,9 @@ public class TaskController {
 
     private final TaskRepository taskRepository;
 
-    @GetMapping("/tasks")
+    @GetMapping(path="/tasks")
     public List<Task> getTasks() {
+        //throw new IllegalArgumentException("Not impl. yet!");
         return taskRepository.findAll();
     }
 }
