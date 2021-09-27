@@ -25,14 +25,15 @@ public class Task {
 
     private LocalDateTime deadline;
 
+    @ManyToOne
+    @JoinColumn(name = "task_groups_id")
+    private TaskGroup group;
+
 
     public void updateFrom(final Task source) {
         this.description = source.description;
         this.done = source.done;
         this.deadline = source.deadline;
+        this.group = source.group;
     }
-
-
-
-
 }
